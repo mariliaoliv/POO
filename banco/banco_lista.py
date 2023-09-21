@@ -1,4 +1,5 @@
-from POO.conta.conta import Conta
+
+from POO.conta.contaabstrata import ContaAbstrata
 from POO.conta.conta_poupanca import ContaPoupanca
 
 class Banco:
@@ -6,7 +7,7 @@ class Banco:
     def __init__(self, numero):
         self.contas = []
 
-    def Cadastrar(self, conta: Conta):
+    def Cadastrar(self, conta: ContaAbstrata):
         self.contas.append(conta)
 
     def procurar_conta(self, numero):
